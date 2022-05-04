@@ -2,12 +2,64 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.button--large {
-  font-size: 2rem;
+:root {
+  font-family: "Arapey", serif;
+  font-size: 20px;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+
+h1 {
+  margin-top: 0.5em;
+  font-family: "Playfair Display SC", serif;
+}
+
+button {
+  padding: 0.3em;
+  border: 1px solid grey;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  transition: background-position 0.5s ease-in-out;
+}
+
+.button--aqua {
+  width: max-content;
+  color: gold;
+  box-shadow: 1px 1px grey;
+  background-color: aqua;
 }
 
 .button--hotpink {
   background-color: hotpink;
+}
+
+.button--show-compliment {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-image: linear-gradient(
+    to right,
+    #dd5e89 0%,
+    #f7bb97 51%,
+    #dd5e89 100%
+  );
+  background-size: 200% auto;
+  background-position: left center;
+}
+
+.button--show-compliment:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background-position: right center;
 }
